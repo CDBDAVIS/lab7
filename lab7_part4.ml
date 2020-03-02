@@ -103,7 +103,8 @@ following strings pushed in order: `"Computer"`, `"Science"`, `"51"`.
 ......................................................................*)
 
 let sample_stack () =
-  Stack.push "Computer" (Stack.push "Science" (Stack.push "51" Stack.empty)) ;;
+  let open Stack in
+  push "51" (push "Science" (push "Computer" empty)) ;;
 
 (*......................................................................
 Exercise 4C: Write an expression to generate a stack with the
